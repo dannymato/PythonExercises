@@ -39,10 +39,11 @@ def is_number(string):
         int(string)
     except ValueError:
         return None
+    return '4'
 
 
 def lexacon():
-    string = raw_input("> ")
+    string = input("> ")
     
     words = string.split()
 
@@ -63,6 +64,11 @@ def lexacon():
             sentence.append(('stop', i))
 
         elif is_number(i) is not None:
+            print('Is number')
             sentence.append(('number', i))
 
+        print(is_number(i))
+
     return sentence
+
+print(lexacon())
